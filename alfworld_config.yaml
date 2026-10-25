@@ -1,0 +1,10 @@
+dataset:
+  data_path: '$ALFWORLD_DATA/json_2.1.1/train'
+  eval_id_data_path: '$ALFWORLD_DATA/json_2.1.1/valid_seen'
+  eval_ood_data_path: '$ALFWORLD_DATA/json_2.1.1/valid_unseen'
+  num_train_games: -1
+  num_eval_games: -1
+
+env:
+  goal_desc_human_anns_prob: 0.0
+  task_types: [1, 2, 3, 4, 5, 6]

@@ -1,0 +1,13 @@
+# Meta-agent and task-agent clients
+langchain-core>=1.0
+langchain-openai>=1.0
+openai>=1.0
+pydantic
+python-dotenv>=1.0
+
+# Lineage graph PNG (the HTML graph needs nothing extra)
+Pillow>=10.0
+
+# ALFWorld environment
+alfworld>=0.4.0
+pyyaml>=6.0

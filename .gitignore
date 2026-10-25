@@ -1,0 +1,18 @@
+# Environments, caches and model checkpoints
+env_vllm/
+env_pipeline/
+cache/
+models/
+alfworld_data/
+
+# Run outputs
+runs/
+previous_*/
+baselines/
+run_logs/
+server_logs/
+
+*.env
+.env
+__pycache__/
+*.pyc

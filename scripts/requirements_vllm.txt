@@ -1,0 +1,23 @@
+# Dependencies for the vLLM server environment (env_vllm, Python 3.10).
+#
+# Kept separate from requirements.txt because vLLM pins torch and transformers
+# versions that conflict with alfworld/textworld. CUDA (cuda-toolkit, cuda-nvcc)
+# is installed into the conda environment by scripts/02_setup_environment.sh.
+#
+# Notes:
+#   torch       needs a CUDA 13 build. If PyPI has none for your platform, use
+#               --index-url https://download.pytorch.org/whl/cu130
+#   vllm        >=0.27 is required for Blackwell (sm_100 / sm_121) GPUs.
+#               Nightly wheels: --extra-index-url https://wheels.vllm.ai/nightly/cu130
+#   flashinfer  if prebuilt kernels are missing for your GPU, build from source
+#               with FLASHINFER_CUDA_ARCH_LIST set for your architecture.
+#   transformers must register the Qwen3.5+ and Gemma 4 architectures; the
+#               setup script checks this against the downloaded checkpoints.
+
+torch>=2.13.0
+torchvision
+torchaudio
+vllm>=0.27.0
+flashinfer-python>=0.6.16
+transformers>=5.13.0
+compressed-tensors
